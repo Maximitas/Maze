@@ -1,10 +1,5 @@
-void openInventory(){
-  println("You opened your inventory.");
-  println(items);
+class Inventory{
 
-}
 
-void goingLeftSecret(){
-  println("You found a sword");
-  items.add("Sword");
+
 }

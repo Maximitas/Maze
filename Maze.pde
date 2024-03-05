@@ -1,7 +1,5 @@
-char lastPressedKey = '\0';
-int counter = 0;
-ArrayList<String> items = new ArrayList<String>();
 boolean aliveOrNot = true;
+char lastPressedKey = '\0';
 
 
 void setup() {
@@ -10,26 +8,28 @@ void setup() {
 }
 
 void draw() {
-  // Your drawing code goes here
 }
 
 void keyPressed() {
+  GoingLeft goingLeft = new GoingLeft();
+  GoingMiddle goingMiddle = new GoingMiddle();
+  GoingRight goingRight = new GoingRight();
   // This function is called whenever a key is pressed
   lastPressedKey = key;
-    // Your custom code here
+    // Here i have a switch that checks which key is pressed and accordingly does something different.
     if(aliveOrNot){
     switch(key){
       case 'a':
-      firstTimeGoingLeft();
+      goingLeft.goingLeft();
       break;
       case 'd':
-      firstTimeGoingRight();
+      goingRight.goingRight();
       break;
       case 'w':
-      firstTimeGoingMiddle();
+      goingMiddle.goingMiddle();
       break;
       case 'i':
-      openInventory();
+      //openInventory();
       break;
       default:
       println("Wrong key pressed, try again");

@@ -1,4 +1,9 @@
-void firstTimeGoingRight(){
-  println("Wow wow wow, you really went to the right?");
+class GoingRight{
+
+        public void goingRight(){
+          println("You went to the right");
+      
+      
+      }
 
 }
